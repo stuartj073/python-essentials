@@ -1,4 +1,8 @@
-## prime factors
+import re
+
+
+# prime factors
+
 
 def get_prime_factors(number):
     factors = []
@@ -13,3 +17,13 @@ def get_prime_factors(number):
 
 
 print(get_prime_factors(11))
+
+
+# palindrome function
+
+
+def palindrome_checker(string):
+    forwards = ''.join(re.findall(r'[a-z]+', string.lower()))
+    backwards = forwards[::-1]
+    return forwards == backwards
+
